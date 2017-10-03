@@ -1,0 +1,54 @@
+@import "../../styles/colors";
+@import "../../styles/typography";
+@import "../../styles/utils";
+
+.header {
+  &__row {
+    background: url('../../assets/images/cjf_cj.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    min-height: rem-calc(480);
+    position: relative;
+
+    @media (max-width: 768px) {
+      background-position: 0;
+    }
+
+    @media (max-width: 425px) {
+      background-size: auto;
+    }
+  }
+
+  &__copy {
+    padding-right: rem-calc(80);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40%;
+
+    @media (max-width: 1165px) {
+      padding-right: rem-calc(36);
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__heading {
+    @include headerHed();
+    margin-bottom: 0;
+
+    @media (max-width: 1040px) {
+      font-size: rem-calc(50);
+    }
+  }
+
+  &__subhead {
+    @include headerSubhed;
+    margin-bottom: 0;
+  }
+}

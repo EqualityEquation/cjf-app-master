@@ -1,0 +1,131 @@
+@import "../../styles/colors";
+@import "../../styles/typography";
+@import "../../styles/utils";
+
+.footer {
+  background-color: $lily-white;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding-bottom: rem-calc(40);
+  width: 100%;
+
+  &__row {
+    display: flex;
+    flex-direction: row wrap;
+    margin: 0 auto;
+    width: rem-calc(960);
+    padding-top: rem-calc(30);
+
+    @media (max-width: 1100px) {
+      display: block;
+      width: 80%;
+    }
+  }
+
+  &__mission {
+    flex: 0 1 auto;
+    margin-bottom: rem-calc(10);
+    margin-right: rem-calc(100);
+    margin-top: 0;
+    width: 35%;
+
+    @media (max-width: 1100px) {
+      width: 45%;
+    }
+
+    @media (max-width: 900px) {
+      margin: 0;
+      width: 100%;
+    }
+
+    &-hed {
+      @include footerHed();
+    }
+
+    &-subhed {
+      @include footerSubhed();
+    }
+  }
+
+  &__links {
+    width: 40%;
+
+    @media (max-width: 900px) {
+      width: 100%;
+    }
+
+    &-hed {
+      @include footerHed();
+    }
+
+    &-list {
+      list-style: none;
+      margin-left: 0;
+    }
+
+    &-list-item {
+      @include footerSubhed();
+      margin: 0;
+      padding-top: rem-calc(7);
+
+      a {
+        color: $charcoal;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__meta {
+  }
+
+  &__logo {
+    height: rem-calc(153);
+    margin: 0 auto;
+    padding-bottom: rem-calc(50);
+    width: rem-calc(250);
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: rem-calc(30);
+  }
+
+  &__social-buttons {
+    cursor: pointer;
+    display: inline-block;
+    height: rem-calc(40);
+    width: rem-calc(40);
+
+    &--facebook {
+      margin-right: rem-calc(20);
+      color: $white;
+    }
+
+    &--twitter {
+      margin-right: rem-calc(20);
+    }
+
+    &--instagram {
+      margin-right: rem-calc(20);
+    }
+  }
+
+  &__button-svg {
+    margin: 0;
+  }
+
+  &__credit {
+    @include footerCredit();
+    margin: 0;
+    padding-right: rem-calc(18);
+    padding-top: rem-calc(15);
+    text-align: right;
+
+    &:nth-of-type(2) {
+      padding-top: rem-calc(5);
+    }
+  }
+}

@@ -1,0 +1,132 @@
+@import "../../styles/colors";
+@import "../../styles/typography";
+@import "../../styles/utils";
+
+.nav {
+  background-color: $desert-sand;
+
+  &__row {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: rem-calc(60);
+    justify-content: space-between;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+      height: rem-calc(70);
+    }
+  }
+
+  &__menu {
+    align-items: center;
+    width: 40%;
+
+    &--left {
+      display: flex;
+      justify-content: center;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    &--center {
+      height: rem-calc(250);
+      position: relative;
+      width: rem-calc(250);
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+
+      &::after {
+        background-color: $desert-sand;
+        background-image: url("../../assets/images/cjf_logo.svg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: rem-calc(200);
+        border-radius: 50%;
+        display: inline-block;
+        content: "";
+        height: rem-calc(250);
+        margin-top: rem-calc(65);
+        position: absolute;
+        top: rem-calc(-20);
+        width: rem-calc(250);
+        z-index: 1000;
+
+        @media (max-width: 1124px) {
+          background-size: rem-calc(150);
+          height: rem-calc(200);
+          width: rem-calc(200);
+        }
+        //
+        // @media (max-width: 768px) {
+        //   background-size: rem-calc(90);
+        //   border-radius: 0;
+        //   height: rem-calc(60);
+        //   margin-top: 0;
+        //   padding-top: rem-calc(10);
+        //   top: rem-calc(90);
+        // }
+      }
+    }
+
+    &--right {
+      display: flex;
+      justify-content: center;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      display: none;
+
+      @media (max-width: 768px) {
+        display: flex;
+        width: 100%;
+
+        &-logo {
+          margin: rem-calc(10);
+          width: rem-calc(80);
+        }
+
+        &-items {
+          display: flex;
+          align-items: center;
+          flex-flow: row wrap;
+        }
+
+        .nav__menu-item {
+          // display: inline-block;
+        }
+      }
+    }
+  }
+
+  &__menu-item {
+    @include nav();
+
+    display: inline;
+    margin: 0;
+    padding: rem-calc(10);
+
+    @media (max-width: 768px) {
+      padding: rem-calc(3 7);
+    }
+
+    a {
+      color: $hint-of-red;
+      text-decoration: none;
+
+      &:any-link,
+      &:-webkit-any-link,
+      &:-moz-any-link {
+        text-decoration: none;
+      }
+    }
+  }
+}

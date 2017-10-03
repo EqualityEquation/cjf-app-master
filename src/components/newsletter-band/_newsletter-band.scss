@@ -1,0 +1,56 @@
+@import "../../styles/colors";
+@import "../../styles/typography";
+@import "../../styles/utils";
+
+.newsletter-band {
+  background-color: $desert-sand;
+  height: rem-calc(100);
+  width: 100%;
+
+  @media (max-width: 1024px) {
+    height: auto;
+    padding-bottom: rem-calc(30);
+  }
+
+  &__row {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    max-width: 960px;
+
+    @media (max-width: 1024px) {
+      display: block;
+    }
+  }
+
+  &__copy {
+    @include newsletterBand();
+
+    margin-top: rem-calc(40);
+
+    @media (max-width: 1024px) {
+      display: block;
+      margin-top: 0;
+      padding-top: rem-calc(40);
+      text-align: center;
+      width: 100%;
+    }
+
+    @media (max-width: 515px) {
+      font-size: rem-calc(24);
+    }
+  }
+
+  .cjf-splash__main {
+    @media (max-width: 1024px) {
+      display: block;
+      width: 100%;
+    }
+
+    @media (max-width: 515px) {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+}

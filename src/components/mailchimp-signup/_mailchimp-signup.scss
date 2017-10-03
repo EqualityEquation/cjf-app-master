@@ -1,0 +1,64 @@
+@import "../../styles/colors";
+@import "../../styles/typography";
+@import "../../styles/utils";
+
+.cjf-splash {
+
+  &__form {
+    color: #414042;
+    display: flex;
+    margin: rem-calc(20) auto 0;
+    width: 50%;
+
+    @media (max-width: 850px) {
+      width: 90%;
+    }
+
+    @media (max-width: 510px) {
+      width: 100%;
+    }
+  }
+
+  &__input {
+    @include inputText();
+    border: 0;
+    flex-grow: 2;
+    height: 40px;
+    padding: 5px 20px;
+
+    @media (max-width: 1220px) {
+      font-size: 12px
+    }
+
+    @media (max-width: 410px) {
+      font-size: 10px
+    }
+  }
+
+  input[type="text"],
+  input[type="submit"],
+  input[type="email"] {
+    -webkit-appearance: none;
+     border-radius: 0;
+  }
+
+  &__button {
+    @include buttonText();
+
+    align-items: flex-end;
+    background-color: $karry;
+    border: 0;
+    border-radius: rem-calc(7);
+    cursor: pointer;
+    flex-grow: 1;
+    height: 45px;
+    margin-left: 30px;
+    padding: 0;
+    width: 100px;
+
+    @media (max-width: 510px) {
+      margin-left: 15px;
+      width: 80px;
+    }
+  }
+}

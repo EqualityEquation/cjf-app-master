@@ -1,0 +1,19 @@
+@import "./normalize";
+@import "./colors";
+@import "./typography";
+@import "./utils";
+// @import "./faq";
+// @import "../components/nav/_nav";
+
+* {
+  background-color: $gray;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+}
